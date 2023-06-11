@@ -8,24 +8,21 @@
 	</head>
 	
 	<body>
-		<h1>Abas</h1>
+		<h1>Modal</h1>
 		
-		<ul role="tabilist">
-			<li><button id="tab-1" role="tab" aria-controls="content-1" aria-selected="true">Aba 1</button></li>
-			<li><button id="tab-2" role="tab" aria-controls="content-2">Aba 2</button></li>
-			<li><button id="tab-3" role="tab" aria-controls="content-3">Aba 3</button></li>
-		</ul>
-		
-		<div id="content-1" role="tabpanel" aria-labeledby="tab-1">
-			<p>Conteúdo 1</p>
+		<div role="dialog" aria-labeledby="modal-label" aria-describedby="modal-desc" aria-modal="true">
+			<h2 id="modal-label">Confirmação</h2>
+			
+			<p>Tem certeza que deseja excluir este arquivo?</p>
+			
+			<div id="modal-desc">
+				<p>Os arquivos serão excluídos permanentemente após 30 dias.</p>
+			</div>
+			
+			<button>Não</button>
+			<button>Sim</button>
 		</div>
 		
-		<div id="content-2" role="tabpanel" aria-labeledby="tab21" aria-hidden="true">
-			<p>Conteúdo 2</p>
-		</div>
-		
-		<div id="content-3" role="tabpanel" aria-labeledby="tab-3" aria-hidden="true">
-			<p>Conteúdo 3</p>
-		</div>
+		<p>Conteúdo</p>
 	</body>
 </html>
