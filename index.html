@@ -8,21 +8,12 @@
 	</head>
 	
 	<body>
-		<h1>Modal</h1>
+		<h1>Barra de Progresso</h1>
 		
-		<div role="dialog" aria-labeledby="modal-label" aria-describedby="modal-desc" aria-modal="true">
-			<h2 id="modal-label">Confirmação</h2>
-			
-			<p>Tem certeza que deseja excluir este arquivo?</p>
-			
-			<div id="modal-desc">
-				<p>Os arquivos serão excluídos permanentemente após 30 dias.</p>
-			</div>
-			
-			<button>Não</button>
-			<button>Sim</button>
-		</div>
+		<label for="progressbar">Carregando...</label>
+		<progress id="progressbar" min="0" max="100" value="50"></progress>
 		
-		<p>Conteúdo</p>
+		<span id="progressbar-label">Carregando...</span>
+		<span role="progressbar" aria-labeledby="progressbar-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></span>
 	</body>
 </html>
