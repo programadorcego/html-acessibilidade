@@ -5,15 +5,43 @@
 		<Title>HTML Acessibilidade</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			.subtree {
+				visibility: hidden;
+				min-height: 0;
+				transition: min-height 0.5s 0s, visibility 0s 0.5s;
+			}
+			
+			.expanded {
+				visibility: visible;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<h1>Controle Deslizante</h1>
+		<h1>Navegação em Árvore</h1>
 		
-		<label for="range">Controle Deslizante</label>
-		<input type="range" id="range" min="0" max="100" value="50">
-		
-		<span id="slider-label">Controle Deslizante</span>
-		<span role="slider" aria-labeledby="slider-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></span>
+		<ul role="tree">
+			<li class="treeitem" role="treeitem" aria-expanded="true" tabindex="0">
+				Parte 1
+				
+				<ul class="subtree expanded" role="group">
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 1</li>
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 2</li>
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 3</li>
+				</ul>
+			</li>
+			
+			<li class="treeitem" role="treeitem" aria-expanded="false" tabindex="0">
+				Parte 2
+				
+				<ul class="subtree" role="group">
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 4</li>
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 5</li>
+					<li class="treeitem" role="treeitem" tabindex="-1">Capítulo 6</li>
+				</ul>
+			</li>
+		</ul>
 	</body>
 </html>
